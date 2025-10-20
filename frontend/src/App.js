@@ -96,7 +96,7 @@ function App() {
         <div className="container-fluid">
           <span className="navbar-brand mb-0 h1">
             <i className="bi bi-check2-square me-2"></i>
-            My Task Manager
+            Task Manager Pro
           </span>
         </div>
       </nav>
