@@ -28,7 +28,16 @@ functions:
       - http:
           path: tasks
           method: post
-          cors: true
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
 
   getTask:
     handler: src/handlers/getTask.handler
@@ -36,7 +45,16 @@ functions:
       - http:
           path: tasks/{id}
           method: get
-          cors: true
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
 
   listTasks:
     handler: src/handlers/listTasks.handler
@@ -44,7 +62,16 @@ functions:
       - http:
           path: tasks
           method: get
-          cors: true
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
 
   updateTask:
     handler: src/handlers/updateTask.handler
@@ -52,7 +79,16 @@ functions:
       - http:
           path: tasks/{id}
           method: put
-          cors: true
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
 
   deleteTask:
     handler: src/handlers/deleteTask.handler
@@ -60,7 +96,16 @@ functions:
       - http:
           path: tasks/{id}
           method: delete
-          cors: true
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
 
 resources:
   Resources:
