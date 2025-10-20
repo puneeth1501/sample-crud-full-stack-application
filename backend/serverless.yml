@@ -3,7 +3,7 @@ service: task-manager-api
 provider:
   name: aws
   runtime: nodejs18.x
-  region: us-east-1
+  region: us-west-2
   stage: ${opt:stage, 'dev'}
   environment:
     TASKS_TABLE: ${self:service}-tasks-${self:provider.stage}

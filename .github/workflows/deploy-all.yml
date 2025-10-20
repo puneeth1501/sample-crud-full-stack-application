@@ -73,9 +73,9 @@ jobs:
         working-directory: ./backend
         run: npm run deploy:prod
 
-  # Job 3: Build and Deploy Frontend to Vercel
+  # Job 3: Build and Deploy Frontend to Surge
   deploy-frontend:
-    name: Deploy Frontend to Vercel
+    name: Deploy Frontend to Surge
     runs-on: ubuntu-latest
     needs: deploy-backend-dev
 
@@ -98,18 +98,17 @@ jobs:
         env:
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
 
-      - name: Deploy to Vercel
-        working-directory: ./frontend
-        run: |
-          npm install -g vercel
-          vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --yes
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      - name: Install Surge
+        run: npm install -g surge
+
+      - name: Deploy to Surge
+        working-directory: ./frontend/build
+        run: surge . task-manager-puneeth.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
       - name: Deployment Summary
         run: |
           echo "🎉 Full Stack Deployment Complete!"
           echo "✅ Backend (Dev) deployed to AWS"
           echo "✅ Backend (Prod) deployed to AWS"
-          echo "✅ Frontend deployed to Vercel"
+          echo "✅ Frontend deployed to Surge"
+          echo "🌐 Frontend URL: https://task-manager-puneeth.surge.sh"
