@@ -193,7 +193,7 @@ code-challenge-6/
 | 4 | CI/CD multi-stage (dev, prod) | ✅ | GitHub Actions with dev → prod pipeline |
 | 5 | Working and documented | ✅ | Fully functional with comprehensive docs |
 | 6 | Public GitHub repository | ✅ | Frequent commits with clear history |
-| 7 | Loom video walkthrough | ⏳ | [Add link after recording] |
+| 7 | Loom video walkthrough | ⏳ | [https://www.loom.com/share/2cd7d2f4c3b7453098d62027bd0e41e3?sid=be51e6ed-f674-4501-959d-1cd53a9e1e77] |
 
 ### Backend Implementation Details
 
@@ -275,24 +275,18 @@ Push to master
 - **Prod Environment**: Deployed after dev succeeds
 - **Frontend**: Deployed in parallel with prod
 
-**Screenshot Placeholders:**
+**Screenshot Placeholders:** inside the documents folder under screenshor folder we have:
 
-![CI/CD Workflow Configuration](./docs/screenshots/01-github-actions-workflow.png)
 *Figure 1: GitHub Actions workflow file showing automated deployment pipeline*
 
-![Successful Pipeline Run](./docs/screenshots/02-pipeline-success.png)
 *Figure 2: Successful deployment showing all three jobs (Deploy Backend Dev, Deploy Backend Prod, Deploy Frontend)*
 
-![Backend Dev Deployment Logs](./docs/screenshots/03-backend-dev-logs.png)
 *Figure 3: Backend deployment to dev environment with Serverless Framework output*
 
-![Backend Prod Deployment Logs](./docs/screenshots/04-backend-prod-logs.png)
 *Figure 4: Backend deployment to prod environment*
 
-![Frontend Deployment Logs](./docs/screenshots/05-frontend-surge-logs.png)
 *Figure 5: Frontend build and deployment to Surge.sh*
 
-![GitHub Secrets Configuration](./docs/screenshots/06-github-secrets.png)
 *Figure 6: GitHub repository secrets for CI/CD (AWS credentials, API URL, Surge token)*
 
 ### Required GitHub Secrets
