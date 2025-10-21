@@ -193,7 +193,7 @@ code-challenge-6/
 | 4 | CI/CD multi-stage (dev, prod) | ✅ | GitHub Actions with dev → prod pipeline |
 | 5 | Working and documented | ✅ | Fully functional with comprehensive docs |
 | 6 | Public GitHub repository | ✅ | Frequent commits with clear history |
-| 7 | Loom video walkthrough | ⏳ | [https://www.loom.com/share/2cd7d2f4c3b7453098d62027bd0e41e3?sid=be51e6ed-f674-4501-959d-1cd53a9e1e77] |
+| 7 | Loom video walkthrough |  | [https://www.loom.com/share/2cd7d2f4c3b7453098d62027bd0e41e3?sid=be51e6ed-f674-4501-959d-1cd53a9e1e77] |
 
 ### Backend Implementation Details
 
